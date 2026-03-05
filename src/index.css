@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.video-call-end-bar span {
+  background-color: rgba(29, 28, 28, 0.527);
+  backdrop-filter: blur(1px);
+}
+.video-call-end-bar .phone {
+  background-color: rgba(255, 0, 0, 0.644);
+}
+.video-call-end-bar {
+  background-color: rgba(223, 219, 219, 0.623);
+}
+.get-started {
+  transition: all ease-in;
+  animation: textZoom 2.5s infinite;
+}
+@keyframes textZoom {
+  20% {
+    font-size: 12px;
+  }
+  40% {
+    font-size: 14px;
+  }
+  60% {
+    font-size: 16px;
+  }
+  80% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+  }
+}
+.file-in {
+  visibility: hidden;
+}
+.text-box-left {
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.text-box-right {
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.text-image {
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 800px) {
+  .welcome-content-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+/*
+.massage-web-body {
+  min-width: 61.5rem;
+}
+*/
+body {
+  scrollbar-gutter: stable;
+}
+.masssage-div {
+  border-right: 4px solid #2563eb;
+  box-sizing: border-box;
+}
+.typing-animation-box {
+  transition: all ease-in;
+}
+.typing-animation-box span:nth-child(1) {
+  animation: typing-animation0 700ms infinite ease-in;
+}
+.typing-animation-box span:nth-child(2) {
+  animation: typing-animation50 1s infinite ease-in;
+}
+.typing-animation-box span:nth-child(3) {
+  animation: typing-animation100 1.1s infinite ease-in;
+}
+@keyframes typing-animation0 {
+  0% {
+    background-color: rgb(44, 192, 44);
+  }
+}
+@keyframes typing-animation50 {
+  50% {
+    background-color: rgb(44, 192, 44);
+  }
+}
+@keyframes typing-animation100 {
+  100% {
+    background-color: rgb(44, 192, 44);
+  }
+}
+.dateUi {
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.no-massage-box {
+  box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
