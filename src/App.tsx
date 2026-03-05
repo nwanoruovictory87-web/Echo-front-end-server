@@ -157,7 +157,10 @@ function App() {
       path: "/audio/call",
       element: <AudioCall />,
     },
-  ]);
+  ],
+      {
+         baseName: '/Echo-front-end-server/'
+           });
   return (
     <>
       <RouterProvider router={router} />
