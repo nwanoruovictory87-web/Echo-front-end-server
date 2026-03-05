@@ -159,7 +159,7 @@ function App() {
     },
   ],
       {
-         baseName: '/Echo-front-end-server/'
+         basename: '/Echo-front-end-server/'
            });
   return (
     <>
