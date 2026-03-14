@@ -11,7 +11,7 @@ import AudioCall from "./components/CallTap/AudioCall";
 import SingUpNumber from "./components/SignIn_SignUp/SingUpNumber";
 //*=============== mobile
 import ChatTapWeb from "./components/ChatTapWeb/ChatTap";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { userAppContext } from "./components/AppContext/AppContext";
 
 //*=============== object type
@@ -119,53 +119,54 @@ function App() {
     head?.appendChild(link);
   }, []);
   //
-  const router = createBrowserRouter([
-    { path: "/", element: <Welcome /> },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/sign/up",
-      element: <SignUp />,
-    },
-    {
-      path: "/sign/up/number",
-      element: <SingUpNumber />,
-    },
-    {
-      path: "/chat",
-      element: <ChatTap />,
-    },
-    {
-      path: "/chat/web",
-      element: <ChatTapWeb />,
-    },
-    {
-      path: "/chat/add/contact",
-      element: <ChatAddContact />,
-    },
-    {
-      path: "/massage",
-      element: <MassageTap />,
-    },
-    {
-      path: "/video/call",
-      element: <VideoCall />,
-    },
-    {
-      path: "/audio/call",
-      element: <AudioCall />,
-    },
-  ],
-      {
-         basename: '/Echo-front-end-server/'
-           });
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
-}
+
+const router = createHashRouter([
+  { path: "/", element: <Welcome /> },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/sign/up",
+    element: <SignUp />,
+  },
+  {
+    path: "/sign/up/number",
+    element: <SingUpNumber />,
+  },
+  {
+    path: "/chat",
+    element: <ChatTap />,
+  },
+  {
+    path: "/chat/web",
+    element: <ChatTapWeb />,
+  },
+  {
+    path: "/chat/add/contact",
+    element: <ChatAddContact />,
+  },
+  {
+    path: "/massage",
+    element: <MassageTap />,
+  },
+  {
+    path: "/video/call",
+    element: <VideoCall />,
+  },
+  {
+    path: "/audio/call",
+    element: <AudioCall />,
+  },
+], {
+  basename: "/Echo-front-end-server", // Keeps your repo name in the URL
+});
+
+return (
+  <>
+    <RouterProvider router={router} />
+  </>
+);
+
 
 export default App;
